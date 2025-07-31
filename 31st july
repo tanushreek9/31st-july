@@ -1,0 +1,5 @@
+bool favouriteBool = true;
+    string favouriteString = "Hello";
+    int256 favouriteInteger = -5; 
+    address favouriteAddress = 0x526a633985a8D1fa3bEFC433ABf499B888b33865;
+    bytes32 favouriteBytes = "Cat";
