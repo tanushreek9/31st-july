@@ -1,0 +1,40 @@
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.7.0 <0.9;
+
+
+contract SimpleStorage{
+    // This will get initialised to 0
+    uint256 public favouriteNumber;
+
+    struct People {
+        uint256 favouriteNumber;
+        string name;
+    }
+
+People public person = People({favouriteNumber: 2, name: "Sam"});
+
+People [] public people; //Dynamic Array 
+
+
+
+
+
+    function Store(uint256 _favouriteNumber) public {
+        favouriteNumber = _favouriteNumber;
+        
+    }
+    function retrieve() public view returns (uint256){
+        return favouriteNumber + favouriteNumber;
+    }
+
+    mapping (string => uint256) public nameToFavouriteNumber;
+
+
+    function addPerson(string memory _name, uint256 _favouriteNumber) public {
+         people.push(People(_favouriteNumber, _name));
+         nameToFavouriteNumber [_name] = _favouriteNumber;
+    }
+
+
+
+}
